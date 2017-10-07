@@ -1,0 +1,8 @@
+﻿<music>
+	<station id="http://cast.radiogroup.com.ua:8000/nrj" 		disp="NRJ" />
+	<station id="http://media-ice.musicradio.com:80/CapitalMP3" disp="Capital FM (London)" />
+	<station id="http://62.80.190.246:8000/ProstoRadiO128" 		disp="Prosto Radio (Odessa)" />
+	<station id="http://62.80.190.246:8000/PRK128" 				disp="Prosto Radio" /> 
+	<station id="http://online-hitfm.tavrmedia.ua/HitFM" 		disp="Hit FM" /> 
+	<station id="audio/Please Don't Let Me Go.mp3"				disp="Please Don't Let Me Go"/>
+</music>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" 
+			   xmlns:s="library://ns.adobe.com/flex/spark" 
+			   xmlns:mx="library://ns.adobe.com/flex/mx" minWidth="955" minHeight="600" width="400" height="150" creationComplete="init()">
+	<fx:Script>
+	<![CDATA[
+
+        import com.summ.radio.RadioCore;
+		import com.summ.radio.events.RadioEvent;
+
+		import mx.core.UIComponent;
+
+
+		public static const SKIN_URL:URLRequest		= new URLRequest("./xml/skins.xml");
+		//public static const SKIN_URL:URLRequest		= new URLRequest("/SummRadio/xml/skins.xml");
+		public static const XML_URL:URLRequest		= new URLRequest("./xml/music.xml");
+		//public static const XML_URL:URLRequest		= new URLRequest("/SummRadio/xml/music.xml");
+
+		private var radio:RadioCore	= new RadioCore();
+
+		private function init():void {
+
+			//radio.visible = false;
+
+			radio.skinURL = SKIN_URL;
+			radio.xmlURL = XML_URL;
+			radio.addEventListener(RadioEvent.CREATED, initWindow);
+			radio.initComponents();
+
+			var ui:UIComponent = new UIComponent();
+			ui.addChild(radio);
+			pan.addChild(ui);
+		}
+
+		private function initWindow(event:Event):void {
+			radio.width = pan.width;
+			radio.height = pan.height;
+
+			var sp:Sprite = new Sprite();
+
+//			sp.graphics.lineStyle(4, 0xff0000);
+//			sp.graphics.drawRect(0, 0, pan.width, pan.height);
+//			sp.graphics.lineStyle(4, 0x0000ff);
+//			sp.graphics.drawRect(0, 0, 200, 75);
+
+			var ui:UIComponent = new UIComponent();
+			ui.addChild(sp);
+			pan.addChild(ui);
+
+			//radio.visible = true;
+		}
+	]]>
+	</fx:Script>
+	<mx:Canvas id="pan" visible="true" width="100%" height="100%">
+	</mx:Canvas>
+</s:Application>

@@ -1,0 +1,26 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath group: 'org.gradlefx', name: 'gradlefx', version: '0.8.3'
+    }
+}
+
+allprojects {
+    apply plugin: 'gradlefx'
+    apply plugin: 'ide'
+}
+
+group = 'com.summ'
+version = '1.2.0'
+
+type = 'swf'
+
+mainClass = 'SummRadioWeb'
+frameworkLinkage = 'merged'
+
+dependencies {
+    merged project(':core')
+}

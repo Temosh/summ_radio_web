@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skin id="green">
+	<play 	x="54" 	y="60" width="80" height="80">		</play>
+	<stop 	x="127" y="70">								</stop>
+	<mute 	x="270" y="18">								</mute>
+	<unmute x="270" y="18">								</unmute>
+	<next 	x="380" y="130">							</next>
+	<prev 	x="20" 	y="130">							</prev>
+	<vol 	x="292" y="18" width="100" height="22">		</vol>
+	<visual x="180" y="100">							</visual>
+	<time	x="5"	y="0">								</time>
+	<byte	x="150"	y="0">								</byte>
+	<logo 	x="172" y="35" width="212" height="70.95">	</logo>
+</skin>
